@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React Task Tracker
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install my-project with npm
 
-### `npm test`
+```bash
+  npm install 
+  npm start
+```
+    
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Task List Display:**
+   - Implemented a clear display of tasks showing their details, including task name, date added, and status.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Add Task:**
+   - Included a user-friendly form for adding new tasks to the list.
+   - Required fields for task name and date added to ensure essential details are provided.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Delete Task:**
+   - Provided a mechanism for users to easily delete tasks from the list.
 
-### `npm run eject`
+4. **Mark as Completed:**
+   - Enabled users to mark tasks as completed, with a visual distinction for completed and incomplete tasks.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Responsiveness:**
+   - Ensured the application's responsiveness for a seamless user experience on both desktop and mobile devices.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. **Local Storage:**
+   - Implemented local storage functionality to persistently store tasks, preventing data loss upon page refresh.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+7. **Filtering:**
+   - Added a filtering mechanism to categorize tasks based on their status, allowing users to focus on completed or incomplete tasks as needed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Lessons Learned
 
-### Making a Progressive Web App
+Creating this project in React taught me valuable lessons. I gained a deeper understanding of component-based architecture, enhancing code organization. Handling state and props improved my grasp on data management in dynamic applications. Integrating React features like hooks and context API enhanced my ability to build interactive and efficient user interfaces. The project also reinforced the importance of responsiveness and the implementation of local storage for data persistence.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- 
+## Optimizations
 
-### Advanced Configuration
+Optimizations:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Modularized code for better organization.
+Improved code reusability.
+Minified and bundled files for faster loading.
+Enhanced semantic HTML for accessibility.
+Added ARIA roles and keyboard navigation.
+Ensured sufficient contrast and alt text for accessibility. -->
 
-### Deployment
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [@Ritesh Meshram](https://www.linkedin.com/in/ritesh-meshram/)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## About
+
+For the assignment, I have built a React-based Single Page Application (SPA). React is a technology I am proficient in, and I have professional experience with it. Additionally, I am in the process of learning NextJS and consider myself a beginner in this framework.
+
