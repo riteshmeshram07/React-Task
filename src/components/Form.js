@@ -1,34 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import './Form.css';
+import { TaskContext } from './TaskContext';
 
-const TaskForm = ({ addTask, taskToEdit, updateTask, cancelEditing }) => {
-  const [task, setTask] = useState(taskToEdit ? taskToEdit.name : '');
-  const [date, setDate] = useState(taskToEdit ? taskToEdit.dateAdded : '');
+const TaskForm = () => {
+  const { addTask, editTask, updateTask } = useContext(TaskContext); // We have to Access methods from TaskContext
+  const [task, setTask] = useState(editTask ? editTask.name : '');
+  const [date, setDate] = useState(editTask ? editTask.dateAdded : '');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (task && date) {
       const newTask = {
-        id: taskToEdit ? taskToEdit.id : new Date().getTime(),
+        id: editTask ? editTask.id : new Date().getTime(),
         name: task,
         dateAdded: date,
-        completed: taskToEdit ? taskToEdit.completed : false,
+        completed: editTask ? editTask.completed : false,
       };
 
-      taskToEdit ? updateTask(newTask) : addTask(newTask);
+      editTask ? updateTask(newTask) : addTask(newTask);
 
       setTask('');
       setDate('');
     }
   };
-
-  useEffect(() => {
-    if (taskToEdit) {
-      setTask(taskToEdit.name);
-      setDate(taskToEdit.dateAdded);
-    }
-  }, [taskToEdit]);
 
   return (
     <div className="task-form-container">
@@ -50,8 +45,8 @@ const TaskForm = ({ addTask, taskToEdit, updateTask, cancelEditing }) => {
           />
         </label>
         <div className="form-buttons">
-          <button type="submit">{taskToEdit ? 'Update Task' : 'Add Task'}</button>
-          {taskToEdit && <button onClick={cancelEditing}>Cancel</button>}
+          <button type="submit">{editTask ? 'Update Task' : 'Add Task'}</button>
+          {editTask && <button onClick={() => updateTask(null)}>Cancel</button>}
         </div>
       </form>
     </div>

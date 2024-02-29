@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TaskContext } from './TaskContext';
 import './List.css';
 
-const TaskList = ({ tasks, deleteTask, markAsCompleted, startEditing }) => {
-  // Sort tasks: completed tasks go to the bottom
+const TaskList = () => {
+  const { tasks, deleteTask, markAsCompleted, startEditing } = useContext(TaskContext);
+
+  // Sort tasks: completed tasks go to the bottom of list and will be shown in bottom
   const sortedTasks = tasks.sort((a, b) => (a.completed === b.completed ? 0 : a.completed ? 1 : -1));
 
   return (
